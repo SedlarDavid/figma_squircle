@@ -156,7 +156,10 @@ class SmoothRadius extends Radius {
   }
 
   @override
-  int get hashCode => hashValues(cornerRadius, cornerSmoothing);
+  int get hashCode => Object.hashAll([
+        cornerRadius,
+        cornerSmoothing,
+      ]);
 
   @override
   String toString() {
